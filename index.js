@@ -3,9 +3,9 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require("body-parser")
 const routes = require("./routes/leaderboard")
-
+require('dotenv').config()
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const dbURI = "mongodb+srv://johndoe:johndoe@leaderboard.n8sst.mongodb.net/Wolfame?retryWrites=true&w=majority"
 mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true})
         .then((res) => {
