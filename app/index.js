@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require("body-parser")
-const routes = require("./routes/leaderboard")
+const routes = require("../routes/leaderboard")
 require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 8080;
