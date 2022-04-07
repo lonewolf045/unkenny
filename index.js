@@ -6,7 +6,7 @@ const routes = require("./routes/leaderboard")
 require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 8080;
-const dbURI = "mongodb+srv://johndoe:johndoe@leaderboard.n8sst.mongodb.net/Wolfame?retryWrites=true&w=majority"
+const dbURI = process.env.MONGODB_URI
 mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true})
         .then((res) => {
             console.log('Connection Established');
